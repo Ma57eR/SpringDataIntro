@@ -25,10 +25,10 @@ public class User {
         this.accounts = new HashSet<>();
     }
 
-    public User(String username, int age, Set<Account> accounts) {
+    public User(String username, int age) {
+        this();
         this.username = username;
         this.age = age;
-        this.accounts = new HashSet<>();
     }
 
     public Long getId() {
