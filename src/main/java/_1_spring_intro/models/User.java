@@ -1,4 +1,4 @@
-package spring_intro.models;
+package _1_spring_intro.models;
 
 
 import javax.persistence.*;
@@ -18,6 +18,7 @@ public class User {
     private int age;
 
     @OneToMany(targetEntity = Account.class, mappedBy = "user")
+    @Column
     private Set<Account> accounts;
 
 
@@ -26,7 +27,7 @@ public class User {
     }
 
     public User(String username, int age) {
-        this();
+        this.accounts = new HashSet<>();
         this.username = username;
         this.age = age;
     }

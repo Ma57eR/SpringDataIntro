@@ -1,4 +1,4 @@
-package spring_intro;
+package _1_spring_intro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

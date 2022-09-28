@@ -1,4 +1,4 @@
-package spring_intro.models;
+package _1_spring_intro.models;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -12,11 +12,10 @@ public class Account {
     @Column(nullable = false)
     private BigDecimal balance;
 
-    @ManyToOne
-    private User account;
 
     @ManyToOne
     private User user;
+
 
     public User getUser() {
         return user;
@@ -29,9 +28,9 @@ public class Account {
     public Account() {
     }
 
-    public Account(BigDecimal balance, User account) {
+    public Account(BigDecimal balance, User user) {
         this.balance = balance;
-        this.account = account;
+        this.user = user;
     }
 
     public Long getId() {
@@ -50,11 +49,4 @@ public class Account {
         this.balance = balance;
     }
 
-    public User getAccount() {
-        return account;
-    }
-
-    public void setAccount(User account) {
-        this.account = account;
-    }
 }
